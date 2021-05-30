@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 600px;
+            text-align: center;
+        }
+
+        .click-button {
+            padding: 200px 100px;
+        }
+
+        .button {
+            font-size: 16px;
+            border: none;
+            padding: 20px 80px;
+            border-radius: 20px;
+            cursor: pointer;
+            background: rgb(190, 190, 190);
+        }
+
+        .button:hover {
+            background: rgb(170, 170, 170);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="click-button">
+            <button id="hello" class="button">click me</button>
+        </div>
+    </div>
+
+    <script>
+        const hello = () => {
+            const message = document.createElement("h2");
+            message.innerText = "Hello, I'm just trying my first repository";
+            const content = document.querySelector(".click-button");
+            content.appendChild(message);
+        }
+        document.getElementById("hello").addEventListener('click',hello);
+    </script>
+</body>
+</html>
